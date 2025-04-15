@@ -25,17 +25,20 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-8 bg-orange-500 md:w-[1250px] mx-auto text-white">
-      <div className="container mx-auto  px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+    <section className="py-12 mt-8 bg-orange-500 w-full md:w-[90%] lg:w-[1250px] rounded-lg mx-auto text-white">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
           {stats.map((stat, index) => (
-            <div key={index}>
-              <div className="bg-white/20 p-4 rounded-full inline-flex items-center justify-center mb-4 w-16 h-16">
-                <img src={stat.icon} alt={stat.label} className="w-8 h-8" />
+            <React.Fragment key={index}>
+              <div className="flex flex-col items-center text-center py-4 md:py-0">
+                <img src={stat.icon} alt={stat.label} className="w-12 h-12 mb-3" />
+                <h3 className="text-4xl font-bold mb-2">{stat.count}</h3>
+                <p className="text-white">{stat.label}</p>
               </div>
-              <h3 className="text-3xl font-bold mb-2">{stat.count}</h3>
-              <p className="text-white/80">{stat.label}</p>
-            </div>
+              {index < stats.length - 1 && (
+                <div className="hidden md:block w-1 h-28 bg-white"></div>
+              )}
+            </React.Fragment>
           ))}
         </div>
       </div>

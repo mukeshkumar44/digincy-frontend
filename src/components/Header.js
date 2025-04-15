@@ -8,7 +8,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white py-4 shadow-sm relative z-50">
+    <header className="bg-[#FFF7F4] py-4 shadow-sm relative z-50">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="w-32">
           <img src="/images/Digiency(Dark)  22.png" alt="Diginecy Logo" className="w-full" />
@@ -43,7 +43,7 @@ const Header = () => {
       
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md py-4 px-4 z-50">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-[#FFF7F4] shadow-md py-4 px-4 z-50">
           <ul className="flex flex-col space-y-4">
             <li><a href="#home" className="text-gray-800 hover:text-orange-500 font-medium block">Home</a></li>
             <li><a href="#about" className="text-gray-800 hover:text-orange-500 font-medium block">About</a></li>
