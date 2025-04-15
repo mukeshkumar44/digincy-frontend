@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-bold text-orange-500 mb-4 lg-mt-10 ">Location</h3>
+            <h3 className="text-xl font-bold text-orange-500 mb-4 -mt-10 lg:mt-1">Location</h3>
             <p className="text-white text-sm md:text-base">
               3517 W. Gray St. Utica, Pennsylvania 57867
             </p>
