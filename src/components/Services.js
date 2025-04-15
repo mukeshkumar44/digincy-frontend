@@ -4,52 +4,73 @@ const Services = () => {
   const services = [
     {
       icon: "/images/ux-interface.png",
-      title: "UX/UI Design",
-      description: "Optimize your website to rank higher in search engines"
+      number: "01",
+      title: "UX Design",
+      subtitle: "Mobile App, Website",
+      description: "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut."
     },
     {
       icon: "/images/Group.png",
+      number: "02",
       title: "Game Design",
-      description: "Create stunning websites that convert visitors into customers"
+      subtitle: "Mobile App, Website",
+      description: "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut."
     },
     {
       icon: "/images/design.png",
-      title: "Graphic Desgin",
-      description: "Engage with your audience on popular social platforms"
+      number: "03",
+      title: "Graphic Design",
+      subtitle: "Mobile App, Website",
+      description: "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut."
     },
     {
       icon: "/images/web-design.png",
-      title: "Web Desgin",
-      description: "Create valuable content that attracts and retains customers"
+      number: "04",
+      title: "Web Design",
+      subtitle: "Mobile App, Website",
+      description: "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut."
     },
     {
       icon: "/images/mobile-development.png",
+      number: "05",
       title: "App Development",
-      description: "Track and analyze your marketing performance"
+      subtitle: "Mobile App, Website",
+      description: "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut."
     },
     {
       icon: "/images/digital-marketing.png",
+      number: "06",
       title: "Digital Marketing",
-      description: "Connect with your audience through targeted email campaigns"
+      subtitle: "Mobile App, Website",
+      description: "Lorem ipsum dolor sit amet, consec tet ur adipiscing elit. Accumsan sed faucibu s faucibus augue. Cras ut."
     }
   ];
 
   return (
-    <section className="py-4 bg-gray-50 md:-mt-14" id="services">
+    <section className="py-8 bg-white" id="services">
       <div className="container mx-auto px-4">
-      <p className="text-orange-500 font-medium mb-2 flex items-center justify-center">
+        <div className="text-center mb-12">
+          <p className="text-orange-500 font-medium mb-2 flex items-center justify-center">
             <span className="w-8 h-px bg-orange-500 mr-2"></span>
-            Your Services
+            Our Services
             <span className="w-8 h-px bg-orange-500 ml-2"></span>
           </p>
-        <h2 className="text-3xl font-bold text-center mb-12">What We Do</h2>
+          <h2 className="text-3xl font-bold text-gray-800">What We Do</h2>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow" key={index}>
-              <div className="ml-[135px]">
-                <img src={service.icon} alt={service.title} className="w-16 h-16" />
+            <div className="bg-white p-6 rounded-lg border border-gray-100 relative" key={index}>
+              <div className="flex items-start mb-4">
+                <div className="mr-4">
+                  <img src={service.icon} alt={service.title} className="w-16 h-16" />
+                </div>
+                <div className="text-gray-200 text-6xl font-bold absolute top-4 right-6">
+                  {service.number}
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+              <h3 className="text-xl font-bold mb-1">{service.title}</h3>
+              <p className="text-gray-500 text-sm mb-4">{service.subtitle}</p>
               <p className="text-gray-600">{service.description}</p>
             </div>
           ))}
