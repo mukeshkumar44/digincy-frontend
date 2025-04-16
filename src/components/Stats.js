@@ -25,7 +25,7 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-12 mt-8 bg-orange-500 w-full md:w-[90%] lg:w-[1250px] rounded-lg mx-auto text-white">
+    <section className="py-12 mb-8 bg-orange-500 w-full md:w-[90%] lg:w-[1250px] rounded-lg mx-auto text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {stats.map((stat, index) => (

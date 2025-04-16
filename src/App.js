@@ -21,8 +21,8 @@ function App() {
       <Portfolio />
       <ProjectGallery />
       <Testimonials />
-      <Stats />
       <TeamCapabilities />
+      <Stats />
       <Blog />
       <Contact />
       <Footer />

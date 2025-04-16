@@ -25,7 +25,7 @@ const TeamCapabilities = () => {
   ];
 
   return (
-    <section className="py-6 bg-white">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
@@ -35,18 +35,12 @@ const TeamCapabilities = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus ut nisi, amet rhoncus volutpat neque. Ipsum in aliquam eget vitae purus felis eget massa felis. Eu mattis in malesuada facilisi proin vel.
             </p>
             
-            <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+            <div className="flex flex-wrap">
               {capabilities.map((capability, index) => (
-                <div key={index} className="mb-4">
-                  <div className="flex flex-col mb-2">
-                    <span className="text-2xl font-bold text-orange-500">{capability.percentage}</span>
+                <div key={index} className="w-1/4 text-center mb-8">
+                  <div className="flex flex-col items-center">
+                    <span className="text-3xl font-bold text-orange-500 mb-1">{capability.percentage}</span>
                     <span className="text-gray-600 text-sm">{capability.title}</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-1.5">
-                    <div 
-                      className={`${capability.color} h-1.5 rounded-full`} 
-                      style={{ width: capability.percentage }}
-                    ></div>
                   </div>
                 </div>
               ))}
