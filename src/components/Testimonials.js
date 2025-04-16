@@ -59,7 +59,7 @@ const Testimonials = () => {
       name: "Michael Brown",
       position: "Founder, StartUp",
       rating: 5,
-      text: "Diginecy's SEO expertise helped us rank on the first page for our key terms. Highly recommended for any business looking to grow."
+      text: "Diginecy's SEO expertise helped us rank on the first page for our key terms. Highly recommended for any business looking."
     }
   ];
 
