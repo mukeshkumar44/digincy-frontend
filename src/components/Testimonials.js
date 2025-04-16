@@ -19,21 +19,21 @@ const Testimonials = () => {
   
   const testimonials = [
     {
-      avatar: "/images/image.png",
+      avatar: "/images/image.png", // Updated image path
       name: "Phillip Levin",
       position: "CEO / Creative IT",
       rating: 5,
       text: "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus."
     },
     {
-      avatar: "/images/image (1).png",
+      avatar: "/images/image (1).png", // Updated image path
       name: "Lincoln Lipshutz",
       position: "CEO / Creative IT",
       rating: 5,
       text: "Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus."
     },
     {
-      avatar: "/images/image (2).png",
+      avatar: "/images/image (1).png", // Updated image path
       name: "Craig Siphron",
       position: "CEO / Creative IT",
       rating: 5,
@@ -41,21 +41,21 @@ const Testimonials = () => {
     },
     // Keep your additional testimonials
     {
-      avatar: "/images/image.png",
+      avatar: "/images/image (2).png", // Updated image path
       name: "John Smith",
       position: "CEO, TechCorp",
       rating: 5,
       text: "Working with Diginecy transformed our online presence. Their strategic approach helped us increase our conversion rate by 40%."
     },
     {
-      avatar: "/images/image (1).png",
+      avatar: "/images/image (2).png", // Updated image path
       name: "Sarah Johnson",
       position: "Marketing Director, Innovate",
       rating: 5,
       text: "The team at Diginecy delivered exceptional results. Our social media engagement has doubled since we started working with them."
     },
     {
-      avatar: "/images/image (2).png",
+      avatar: "/images/image (1).png", // Updated image path
       name: "Michael Brown",
       position: "Founder, StartUp",
       rating: 5,
@@ -147,13 +147,23 @@ const Testimonials = () => {
                     <p className="text-gray-700 mb-6 md:mb-8 text-sm md:text-base">{testimonial.text}</p>
                     
                     <div className="flex items-center">
-                      <img src={testimonial.avatar} alt={testimonial.name} className="w-10 h-10 md:w-12 md:h-12 rounded-full mr-3 md:mr-4" />
+                      <img 
+                        src={testimonial.avatar} 
+                        alt={testimonial.name} 
+                        className="w-10 h-10 md:w-12 md:h-12 rounded-full mr-3 md:mr-4"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = "/images/default-avatar.jpg"; // Fallback image
+                        }} 
+                      />
                       <div>
                         <h3 className="font-semibold text-orange-500 text-sm md:text-base">{testimonial.name}</h3>
                         <p className="text-gray-600 text-xs md:text-sm">{testimonial.position}</p>
                       </div>
                       <div className="ml-auto text-gray-300 text-4xl md:text-5xl">
-                        <img src="/images/double-quotes-l.png" alt="" className="w-8 h-8 md:w-auto md:h-auto" />
+                        <span className="text-gray-300">
+                          <img src="/images/double-quotes-l.png" alt="rewe" />
+                        </span>
                       </div>
                     </div>
                   </div>
